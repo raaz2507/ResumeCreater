@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Creater</title>
+    <style>
+        body, html{
+            width: 100%;
+            height:100%;
+        }
+        *{
+            padding:0;
+            margin: 0;
+            box-sizing: border-box;
+            /* border: 1px solid red; */
+        }
+        body{
+            background-color: #1BF4FF;
+        }
+        header{
+            text-align: center;
+            margin: 1rem 0;
+        }
+        form[name="DetailsForm"]{
+            width: 50rem;
+            margin: 1rem auto;
+            background-color: #ff1bf476;
+            border-radius: 13px;
+        }
+        form[name="DetailsForm"] fieldset{
+            padding: 1rem;
+            border: 1px dashed rgb(255, 104, 129);
+            border-radius: 10px;
+        }
+        form[name="DetailsForm"] fieldset div{
+            margin: 5px 0;
+        }
+        form[name="DetailsForm"] fieldset label{
+            display: inline-block;
+            width: 40%;
+        }
+        footer{
+            text-align: center;
+            margin: 1rem;
+        }
+        /* flex settings start*/
+        body{
+            /* display: flex;
+            flex-direction: column;
+            align-items: center; */
+        }
+        form[name="DetailsForm"] fieldset{
+            display:flex;
+            flex-direction: column;
+        }
+         /* flex setting end */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Resume Creater</h1>
+    </header>
+    <form action="" name="DetailsForm">
+        <fieldset>
+            <legend>Personla Info</legend>
+            <div>  
+                <label for="naam">Name</label>
+                <input type="text" name="naam" id="naam">
+            </div>
+            <div>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div>
+                <label for="phoneNum">Phone Number</label>
+                <input type="number" name="phoneNum" id="phoneNum">
+            </div>
+           
+            <div>
+                <label for="Add Fild">add Another Fild</label>
+                <button id="addFild" name="addFild">+</button>
+            </div>
+        </fieldset>
+        <input type="submit" value="save">
+    </form>
+
+    <footer>
+        @Dovelop by Legends
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=>{
+            new ResumeDashbord();
+        });
+
+        class ResumeDashbord{
+            constructor(){
+                getElements();
+            }
+            getElements(){
+                const DetailsForm = document.forms["DetailsForm"];
+                const addFild = DetailsForm.addFild;
+                addFild.addEventListener('click', ()=>{
+                    document.createElement("label")
+                });
+            }
+            setEvents(){
+
+            }
+        } 
+    </script>
+</body>
+</html>
