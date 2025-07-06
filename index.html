@@ -16,7 +16,9 @@
             /* border: 1px solid red; */
         }
         body{
-            background-color: #1BF4FF;
+            background: url('./img/resumeBck1.svg') #1BF4FF;
+            background-size: 400px;
+            backdrop-filter: blur(2px);
         }
         header{
             text-align: center;
@@ -25,12 +27,13 @@
         form[name="DetailsForm"]{
             width: 50rem;
             margin: 1rem auto;
+            padding: 1rem;
             background-color: #ff1bf476;
             border-radius: 13px;
         }
         form[name="DetailsForm"] fieldset{
             padding: 1rem;
-            border: 1px dashed rgb(255, 104, 129);
+            border: 1px dashed rgb(110, 0, 18);
             border-radius: 10px;
         }
         form[name="DetailsForm"] fieldset div{
@@ -80,6 +83,12 @@
             <div>
                 <label for="Add Fild">add Another Fild</label>
                 <button id="addFild" name="addFild">+</button>
+            </div>
+            <div>
+                <label for="">Fild Name</label>
+                <input type="text" name="newFild" id="newFild">
+                <label for="value">Value</label>
+                <input type="text" name="value" id="">
             </div>
         </fieldset>
         <input type="submit" value="save">
